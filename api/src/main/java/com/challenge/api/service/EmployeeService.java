@@ -25,8 +25,10 @@ public class EmployeeService {
     }
 
     public Employee getEmployeeByUuid(UUID uuid) {
-        return employeeRepository.findByUuid(uuid)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee not found with UUID: " + uuid));
+        return employeeRepository
+                .findByUuid(uuid)
+                .orElseThrow(() ->
+                        new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee not found with UUID: " + uuid));
     }
 
     public Employee createEmployee(CreateEmployeeRequest request) {

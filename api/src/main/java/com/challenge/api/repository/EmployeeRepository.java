@@ -18,7 +18,7 @@ public class EmployeeRepository {
 
     public EmployeeRepository() {
         // Seed mock data for demonstration
-        UUID seedId1 = UUID.randomUUID();
+        UUID seedId1 = UUID.fromString("8386bb48-78ca-4cac-935d-3c712ffc87cd");
         EmployeeImpl emp1 = new EmployeeImpl();
         emp1.setUuid(seedId1);
         emp1.setFirstName("Shreyash");
